@@ -1,7 +1,6 @@
 # JavaScript Notes
 
-This repository contains my personal version of JavaScript notes that I compiled while learning from the famous **Chai Aur Javascript** YouTube series by **Hitesh Sir**. The notes are written in Hindi, reflecting the language used in the series.
-
+This repository contains my personal version of JavaScript notes that I compiled while learning from the famous **Chai Aur Javascript** YouTube series by **Hitesh Sir**. 
 ## Contributions
 
 - If you find any mistakes in my notes, please feel free to correct them by making a pull request (PR).
@@ -13,7 +12,7 @@ This repository contains my personal version of JavaScript notes that I compiled
 
 2. **Clone your fork**: 
    ```bash
-   git clone https://github.com/your-username/javascript-notes.git
+   git clone https://github.com/itsAakashz/JavaScriptLearningNotes.git
    ```
    
 3. **Create a new branch**: 
