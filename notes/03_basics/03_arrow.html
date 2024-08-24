@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const user = {
+                        username: "hitesh",
+                        price: 999,
+                    
+                        welcomeMessage: function() {
+                            console.log(`${this.username} , welcome to website`);
+                            console.log(this);
+                        }
+                    
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p>Here <strong>this</strong> refers to Current context</p> <br>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                   console.log(this); //In node env return {}
+                   console.log(this); //In Browser return Window{}
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <code><strong>this</strong>not works inisde 01_functions/code>
+            </div>
+            <br>
+            <h2>Arrow Function</h2>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const chai =  () => {
+                        let username = "hitesh"
+                        console.log(this);
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+             {}
+            </div>
+            <br>
+            <li>Implicit Arrow Function<code>const addTwo = (num1, num2) =>  num1 + num2</code></li>
+            <li>In arrow functions, if the function body is just an expression, you can omit the return keyword and braces, and the expression will be implicitly returned.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const addTwo = (num1, num2) =>  num1 + num2
+
+                    const addTwo = (num1, num2) => ( num1 + num2 )
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p>Both will return same result.</p>
+            <li>If you use curly brackets {} in an arrow function, you must include the return keyword to return a value. Without it, the function won't return anything, which could lead to unexpected results in your code.</li>
+            <br>
+            <br>
+            <li> when you want to return an object literal directly, you need to use parentheses () around the object literal to distinguish it from a block of code.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const addTwo = (num1, num2) => ({username: "hitesh"})
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p>Here, the parentheses () around { username: "hitesh" } are used to indicate that this is an object literal and not a block of code.</p>
+
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./01_functions.html" class="nav-btn previous">Previous</a>
+                <a href="#" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>
