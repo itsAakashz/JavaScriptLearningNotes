@@ -25,6 +25,7 @@ header h1 {
     background: none;
     border: none;
     cursor: pointer;
+    color: aqua;
 }
 
 #themeToggle img {
@@ -99,6 +100,11 @@ nav ul li a:hover {
     background-color: #fff;
 }
 
+#git{
+    text-align: center;
+    color: aqua;
+    text-decoration: none;
+}
 /* Dark Theme Styles */
 body.dark-mode {
     background-color: #333;
@@ -128,14 +134,4 @@ body.dark-mode .collapsible {
 
 body.dark-mode .content {
     background-color: #333;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: whitesmoke;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
