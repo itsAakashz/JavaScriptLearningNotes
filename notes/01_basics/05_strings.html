@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Strings</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const gameName = new String('hitesh-hc-com')
+
+                    console.log(gameName[0]);
+                    console.log(gameName.__proto__);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+            h <br>
+            {} <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const gameName = new String('hitesh-hc-com')
+                    console.log(gameName.length);
+                    console.log(gameName.toUpperCase());
+                    console.log(gameName.charAt(2));
+                    console.log(gameName.indexOf('t'));
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    13 <br>
+                    HITESH-HC-COM <br>
+                    t <br>
+                    2 <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const gameName = new String('hitesh-hc-com')
+                    const newString = gameName.substring(0, 4)
+                    console.log(newString);
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    hite
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const newStringOne = "   hitesh    "
+                    console.log(newStringOne);
+                    console.log(newStringOne.trim()); \\Triming the spaces in the string
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                <pre>       hitesh    </pre>
+                    hitesh
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const gameName = new String('hitesh-hc-com')
+
+                    const url = "https://hitesh.com/hitesh%20choudhary"
+
+                    console.log(url.replace('%20', '-'))
+                    console.log(url.includes('sundar'))
+                    console.log(gameName.split('-'));
+                    console.log(url.split('/'));
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    https://hitesh.com/hitesh-choudhary <br>
+                    false <br>
+                    [ 'hitesh', 'hc', 'com' ] <br>
+                    [ 'https:', '', 'hitesh.com', 'hitesh%20choudhary' ]
+            </div>
+            <!-- <div class="code-snippet">
+                <pre><code class="language-js">
+                   
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+            
+            </div> -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+
+     <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

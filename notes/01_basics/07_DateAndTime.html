@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Date & Times</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <h2>Date Get Methods</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>getFullYear()</td>
+                        <td>Get <strong>year</strong> as a four-digit number (yyyy)</td>
+                    </tr>
+                    <tr>
+                        <td>getMonth()</td>
+                        <td>Get <strong>month</strong> as a number (0-11)</td>
+                    </tr>
+                    <tr>
+                        <td>getDate()</td>
+                        <td>Get <strong>day</strong> as a number (1-31)</td>
+                    </tr>
+                    <tr>
+                        <td>getDay()</td>
+                        <td>Get <strong>weekday</strong> as a number (0-6)</td>
+                    </tr>
+                    <tr>
+                        <td>getHours()</td>
+                        <td>Get <strong>hour</strong> (0-23)</td>
+                    </tr>
+                    <tr>
+                        <td>getMinutes()</td>
+                        <td>Get <strong>minute</strong> (0-59)</td>
+                    </tr>
+                    <tr>
+                        <td>getSeconds()</td>
+                        <td>Get <strong>second</strong> (0-59)</td>
+                    </tr>
+                    <tr>
+                        <td>getMilliseconds()</td>
+                        <td>Get <strong>millisecond</strong> (0-999)</td>
+                    </tr>
+                    <tr>
+                        <td>getTime()</td>
+                        <td>Get <strong>time</strong> (milliseconds since January 1, 1970)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let myDate = new Date()
+                    console.log(myDate.toString());
+                    console.log(myDate.toDateString());
+                    console.log(myDate.toLocaleString());
+                    console.log(typeof myDate);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                <pre>
+                    Tue Aug 20 2024 19:21:31 GMT+0000 (Coordinated Universal Time)
+                    Tue Aug 20 2024
+                    8/20/2024, 7:21:31 PM
+                    object
+                </pre>
+            </div>
+            <br>
+            <pre>
+                let myCreatedDate = new Date(2023, 0, 23)
+                Output: 1/23/2023, 12:00:00 AM
+                
+                let myCreatedDate = new Date(2023, 0, 23, 5, 3)
+                Output: 1/23/2023, 5:03:00 AM
+                
+                let myCreatedDate = new Date("2023-01-14")
+                Output: 1/14/2023, 12:00:00 AM
+                
+                let myCreatedDate = new Date("01-14-2023")
+                Output: 1/14/2023, 12:00:00 AM
+            </pre>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

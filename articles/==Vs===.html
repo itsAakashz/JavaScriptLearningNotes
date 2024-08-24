@@ -1,0 +1,23 @@
+<h2>Difference Between <code>==</code> and <code>===</code> in JavaScript</h2>
+
+    <p>In JavaScript, <code>==</code> and <code>===</code> are comparison operators, but they work differently:</p>
+
+    <ul>
+        <li><code>==</code> (Equality Operator) compares two values for equality after converting both values to a common type. This is known as type coercion.</li>
+        <li><code>===</code> (Strict Equality Operator) compares two values for equality without performing any type conversion. This means both the value and the type must be the same for the comparison to return <code>true</code>.</li>
+    </ul>
+
+    <p>Consider the following examples:</p>
+<div class="code-snippet">
+    <pre><code class="language-js">
+        console.log("2" == 2);  // Output: true
+        console.log("2" === 2); // Output: false
+    </code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+    <h3>Explanation:</h3>
+    <ul>
+        <li>In the first comparison, <code>"2" == 2</code>, JavaScript converts the string <code>"2"</code> to a number <code>2</code> before comparing, so the result is <code>true</code>.</li>
+        <li>In the second comparison, <code>"2" === 2</code>, JavaScript compares the string <code>"2"</code> with the number <code>2</code> without type conversion. Since the types are different (string vs. number), the result is <code>false</code>.</li>
+    </ul>

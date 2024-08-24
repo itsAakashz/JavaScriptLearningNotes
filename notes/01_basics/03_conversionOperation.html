@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Conversion and Operations</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <h2>Conversions</h2>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let score = "hitesh"
+
+                    console.log(typeof score);
+                    console.log(typeof(score));
+
+                    let valueInNumber = Number(score)
+                    console.log(typeof valueInNumber);
+                    console.log(valueInNumber);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                string <br>
+                string <br>
+                number
+                NaN <br>
+                101</p>
+            </div>
+            <p>
+                <h3>Conversion into Number</h3>
+                 "33" => 33 <br>
+                 "33abc" => NaN <br>
+                  true => 1; false => 0
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+                        let a = null
+                        console.log(Number(a)) 
+                    </code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <div class="console-output">
+                    <p><strong>Console Output:</strong> 0
+                </div>
+
+<br>
+                 <h3>Conversion into Boolean</h3>
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+                        let isLoggedIn = "hitesh"
+
+                        let booleanIsLoggedIn = Boolean(isLoggedIn)
+                         console.log(booleanIsLoggedIn);
+                    </code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+               true
+            </div>
+                "" => False <br>
+                "Aakash" => True <br>
+                0 => False <br>
+                1 => True
+
+            <br>
+            <h3>Conversion into String</h3>
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+                        let someNumber = 33
+
+                        let stringNumber = String(someNumber)
+                        console.log(stringNumber);
+                        console.log(typeof stringNumber);
+                    </code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+               true
+            </div>
+                33 <br>
+                String
+            </p>
+<br>
+            <h2>JavaScript Arithmetic Operators</h2>
+            <p>Arithmetic operators are used to perform arithmetic between variables and/or values.</p>
+            <p>Given that <code>y = 5</code>, the table below explains the arithmetic operators:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                        <td><code>x = y + 2</code></td>
+                        <td><code>x = 7</code></td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtraction</td>
+                        <td><code>x = y - 2</code></td>
+                        <td><code>x = 3</code></td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                        <td><code>x = y * 2</code></td>
+                        <td><code>x = 10</code></td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                        <td><code>x = y / 2</code></td>
+                        <td><code>x = 2.5</code></td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Modulus (division remainder)</td>
+                        <td><code>x = y % 2</code></td>
+                        <td><code>x = 1</code></td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Increment</td>
+                        <td><code>x = ++y</code></td>
+                        <td><code>x = 6</code></td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decrement</td>
+                        <td><code>x = --y</code></td>
+                        <td><code>x = 4</code></td>
+                    </tr>
+                </tbody>
+            </table>
+<br>
+            <p>Assignment operators are used to assign values to JavaScript variables.</p>
+            <p>Given that <code>x = 10</code> and <code>y = 5</code>, the table below explains the assignment operators:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>=</td>
+                        <td><code>x = y</code></td>
+                        <td></td>
+                        <td><code>x = 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td><code>x += y</code></td>
+                        <td><code>x = x + y</code></td>
+                        <td><code>x = 15</code></td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td><code>x -= y</code></td>
+                        <td><code>x = x - y</code></td>
+                        <td><code>x = 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td><code>x *= y</code></td>
+                        <td><code>x = x * y</code></td>
+                        <td><code>x = 50</code></td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td><code>x /= y</code></td>
+                        <td><code>x = x / y</code></td>
+                        <td><code>x = 2</code></td>
+                    </tr>
+                    <tr>
+                        <td>%=</td>
+                        <td><code>x %= y</code></td>
+                        <td><code>x = x % y</code></td>
+                        <td><code>x = 0</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <h3>Some Operations</h3>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let value = 3
+                    let negValue = -value
+                    let numCheck = negValue + 5
+                    console.log(numCheck);
+                    console.log(negValue);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+               2 <br>
+               -3
+            </div>
+
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log("1" + 2);
+                    console.log(1 + "2");
+                    console.log("1" + 2 + 2);
+                    console.log(1 + 2 + "2");
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+              12 <br>
+            12 <br>
+                    122<br>
+                    32
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log(+true);
+                    console.log(+"");
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+              1 <br>
+            0 <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let gameCounter = 100
+                    ++gameCounter;
+                    console.log(gameCounter);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+              101 <br>
+            </div>
+            <br>
+            
+            <a href="https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion">Link to dive more deep</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+
+     <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Functions</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    function addTwoNumbers(number1, number2){
+
+                        console.log(number1 + number2);
+                    }
+                    const result = addTwoNumbers(3, 5)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+8
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+
+                    function addTwoNumbers(number1, number2){
+
+                        console.log(number1 + number2);
+                    }
+                    const result = addTwoNumbers(3, 5)
+
+                    console.log("Result: ", result);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    8 <br>
+                    Result:  undefined
+            </div>
+            <p>Result is <code>undefined</code> in this case because we not returning anything from the function in this case. </p>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    function addTwoNumbers(number1, number2){
+                        return number1 + number2
+                    }
+
+                    const result = addTwoNumbers(3, 5)
+
+                    console.log("Result: ", result);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    Result:  8
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    function loginUserMessage(username){
+                    
+                       // if(username === undefined){
+                       //     console.log("PLease enter a username");
+                       //     return
+                       // }
+                    
+                        if(!username){
+                            console.log("PLease enter a username");
+                            return
+                        }
+                        return `${username} just logged in`
+                    }
+
+                    console.log(loginUserMessage())
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+             <p><code>function loginUserMessage(username="sam"){</code> In this case default value is sam </p> 
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    PLease enter a username <br>
+                    undefined
+            </div>
+             <li>If we don't pass any argument in funtion then it returns <code>Undefined</code></li>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    function calculateCartPrice(val1, val2, ...num1){
+                        return num1
+                    }
+
+                    console.log(calculateCartPrice(200, 400, 500, 2000, 5000))
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 500, 2000, 5000 ]
+            </div>
+            <li>...num1 is the rest operator which takes all the arguments and stores them in an array </li>
+            <li>The function receives the first two arguments (val1, val2), and the remaining arguments are captured in the array num1. </li>
+
+
+
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="../02_basics/03_objects.html" class="nav-btn previous">Previous</a>
+                <a href="./02_scope.html" class="nav-btn next">Next</a>
+            </div>
+        </section>
+        
+
+           
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

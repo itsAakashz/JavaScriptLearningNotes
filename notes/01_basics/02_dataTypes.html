@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Data Types</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <h2>Primitive and Non-primitive data-types</h2>
+            <p>Primitive data types:
+            The predefined data types provided by JavaScript language are known as primitive data types. Primitive data types are also known as in-built data types. <br>
+                Ex- Number, String, Boolean, Undefined, Null, Symbol, BigInt.
+            <br>
+            Non-primitive data types:
+            The data types that are derived from primitive data types of the JavaScript language are known as non-primitive data types. It is also known as derived data types or reference data types. <br>
+            Ex-Object, Array </p>
+            <h2>JavaScript Datatypes:</h2>
+            <p>String <br>
+            Number 
+            Bigint <br>
+            Boolean
+            Undefined <br>
+            Null
+            Symbol <br>
+            Object</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    "use strict"; // treat all JS code as newer version.
+                    console.log(3 + 3) // code readability should be high
+
+                    console.log("Hitesh")
+                    
+                    let name = "hitesh"
+                    let age = 18
+                    let isLoggedIn = false
+                    let state;
+
+                    // number => 2 to power 53
+                    // bigint
+                    // string => ""
+                    // boolean => true/false
+                    // null => standalone value
+                    // undefined => 
+                    // symbol => unique
+
+
+                    // object
+
+                    console.log(typeof undefined); // undefined
+                    console.log(typeof null); // object
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> 
+                6 <br>
+                Hitesh <br>
+                undefined <br>
+                object</p>
+            </div>
+            <p>The important differences between Null and Undefined are:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Null</th>
+                            <th>Undefined</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>It is an assignment value. It can be assigned to a variable which indicates that a variable does not point to any object.</td>
+                            <td>It is not an assignment value. It means a variable has been declared but has not yet been assigned a value.</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>It is an object.</td>
+                            <td>It is a type itself.</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>The null value is a primitive value which represents the null, empty, or non-existent reference.</td>
+                            <td>The undefined value is a primitive value, which is used when a variable has not been assigned a value.</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Null indicates the absence of a value for a variable.</td>
+                            <td>Undefined indicates the absence of the variable itself.</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Null is converted to zero (0) while performing primitive operations.</td>
+                            <td>Undefined is converted to NaN while performing primitive operations.</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+
+     <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

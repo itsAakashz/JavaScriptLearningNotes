@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Data Types Summary</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+
+        <p>JavaScript has two main types of values: <strong>Primitive</strong> and <strong>Reference</strong> (Non-Primitive).</p>
+
+        <h2>Primitive Types</h2>
+        <p>Primitive values are immutable and stored directly in memory. There are 7 primitive types:</p>
+
+        <ul>
+            <li><strong>String:</strong> Represents a sequence of characters.
+                <div class="example">
+                    <code>const name = "John";</code>
+                </div>
+            </li>
+            <li><strong>Number:</strong> Represents both integer and floating-point numbers.
+                <div class="example">
+                    <code>const score = 100;</code><br>
+                    <code>const scoreValue = 100.3;</code>
+                </div>
+            </li>
+            <li><strong>Boolean:</strong> Represents <code>true</code> or <code>false</code> values.
+                <div class="example">
+                    <code>const isLoggedIn = false;</code>
+                </div>
+            </li>
+            <li><strong>null:</strong> Represents the intentional absence of any object value.
+                <div class="example">
+                    <code>const outsideTemp = null;</code>
+                </div>
+            </li>
+            <li><strong>undefined:</strong> Represents a variable that has been declared but not yet assigned a value.
+                <div class="example">
+                    <code>let userEmail;</code>
+                </div>
+            </li>
+            <li><strong>Symbol:</strong> Represents a unique and immutable identifier, often used for object property keys.
+                <div class="example">
+                    <code>const id = Symbol('123');</code><br>
+                    <code>const anotherId = Symbol('123');</code><br>
+                    <code>console.log(id === anotherId); // false</code>
+                </div>
+                <p>Symbols are always unique, even if they have the same description.</p>
+            </li>
+            <li><strong>BigInt:</strong> Represents whole numbers larger than the safe integer limit (<code>Number.MAX_SAFE_INTEGER</code>).
+                <div class="example">
+                    <code>// const bigNumber = 3456543576654356754n;</code>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Reference Types (Non-Primitive)</h2>
+        <p>Reference types are objects that are stored as a reference in memory. When you work with reference types, you're dealing with a reference to the object, not the actual object itself.</p>
+
+        <ul>
+            <li><strong>Array:</strong> An ordered collection of values.
+                <div class="example">
+                    <code>const heros = ["shaktiman", "naagraj", "doga"];</code>
+                </div>
+            </li>
+            <li><strong>Object:</strong> A collection of key-value pairs.
+                <div class="example">
+                    <code>let myObj = { name: "hitesh", age: 22 };</code>
+                </div>
+            </li>
+            <li><strong>Function:</strong> A block of code designed to perform a particular task.
+                <div class="example">
+                    <code>const myFunction = function() { console.log("Hello world"); };</code>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Type Checking</h2>
+        <p>Use <code>typeof</code> to check the type of a variable.</p>
+        <div class="example">
+            <code>console.log(typeof anotherId); // "symbol"</code>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+
+     <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

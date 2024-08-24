@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+   
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Objects and Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <!-- Arrays Section (Existing) -->
+        <section class="note">
+            <h2>Arrays</h2>
+            <!-- Existing array content here -->
+        </section>
+
+        <!-- Objects Section (New) -->
+        <section class="note">
+            <h2>Object Literals</h2>
+            <p>An object literal is a way to define an object in JavaScript using a simple, literal notation.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+const JsUser = {
+    name: "Hitesh",
+    "full name": "Hitesh Choudhary",
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+};
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p><em>Object literals are a simple and efficient way to create objects with key-value pairs.</em></p>
+
+            <h2>Using Symbols as Keys</h2>
+            <p>Symbols are a unique and immutable data type that can be used as keys in objects. This ensures that the key is always unique, avoiding any key collisions.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+const mySym = Symbol("key1");
+const JsUser = {
+    name: "Hitesh",
+    [mySym]: "mykey1",
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+};
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p><em>Using <code>[mySym]</code> as a key ensures that it is unique, even if there are other keys with the same name.</em></p>
+
+            <h2>Accessing and Modifying Object Properties</h2>
+            <p>Object properties can be accessed and modified using either dot notation or bracket notation.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+console.log(JsUser.email); // Access using dot notation
+console.log(JsUser["email"]); // Access using bracket notation
+console.log(JsUser["full name"]); // Accessing a property with spaces using bracket notation
+console.log(JsUser[mySym]); // Accessing a property defined with a Symbol
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p><em>You can change object properties directly by reassigning them. However, if an object is frozen using <code>Object.freeze()</code>, its properties cannot be modified.</em></p>
+
+            <h2>Adding Methods to Objects</h2>
+            <p>You can add methods to objects, which are functions that operate on the object's properties.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+JsUser.greeting = function() {
+    console.log("Hello JS user");
+};
+JsUser.greetingTwo = function() {
+    console.log(`Hello JS user, ${this.name}`);
+};
+console.log(JsUser.greeting()); // Outputs: "Hello JS user"
+console.log(JsUser.greetingTwo()); // Outputs: "Hello JS user, Hitesh"
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p><em>The <code>greeting</code> method simply logs a greeting message, while <code>greetingTwo</code> uses the <code>this</code> keyword to access the object's <code>name</code> property dynamically.</em></p>
+
+            <h2>Freezing an Object</h2>
+            <p>The <code>Object.freeze()</code> method can be used to prevent any modifications to an object. Once frozen, properties cannot be added, removed, or changed.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+Object.freeze(JsUser);
+JsUser.email = "hitesh@microsoft.com"; // This will not change the email
+console.log(JsUser.email); // Outputs: "hitesh@google.com"
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p><em>Even though the email is reassigned after freezing, the change will not be applied.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    myArr.push(6)
+                    myArr.push(7)
+                    console.log(myArr)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [
+                      0, 1, 2, 3,
+                      4, 5, 6, 7
+                    ]
+            </div>
+            <p><em>This will add 6 and 7 to the end of <code>myArr</code>.</em></p>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    myArr.pop()
+                    console.log(myArr)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 0, 1, 2, 3, 4 ]
+            </div>
+             <li><strong>pop:</strong> Removes the last element from the array.</li>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    myArr.unshift(9)
+                    console.log(myArr)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [
+                      9, 0, 1, 2,
+                      3, 4, 5
+                    ]
+            </div>
+             <p><em>This will add 9 to the beginning of <code>myArr</code>.</em></p>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    myArr.shift()
+                    console.log(myArr)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 1, 2, 3, 4, 5 ]
+            </div>
+             <p><em>This will remove the first element from <code>myArr</code>.</em></p>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    console.log(myArr.includes(9));
+                    console.log(myArr.indexOf(3));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                  false <br>
+                    3 
+            </div>
+             <li><strong>includes:</strong> Checks if a certain value exists in the array.</li>
+            <li><strong>indexOf:</strong> Returns the first index at which a given element can be found in the array, or -1 if it is not present.</li>
+            <br>
+            <h3>Joining Elements</h3>
+            <p>You can use the <code>join()</code> method to combine all elements of an array into a single string, with a specified separator.</p>
+            <div class="example">
+                <code>const newArr = myArr.join();</code><br>
+                <code>console.log(newArr);</code>
+            </div>
+
+            <h3>Array Slicing and Splicing</h3>
+            <p><strong>slice</strong> and <strong>splice</strong> are two important methods for manipulating arrays:</p>
+<br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    console.log("A ", myArr);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    A  [ 0, 1, 2, 3, 4, 5 ]
+            </div>
+            <br>
+            <li><strong>slice:</strong> Returns a shallow copy of a portion of an array into a new array. The original array is not modified.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    const myn1 = myArr.slice(1, 3)
+                    console.log(myn1);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 1, 2 ]
+            </div>
+             <p><em><code>slice(1, 3)</code> extracts elements from index 1 up to, but not including, index 3.</em></p>
+            <br>
+             <li><strong>splice:</strong> Changes the contents of an array by removing or replacing existing elements and/or adding new elements.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myArr = [0, 1, 2, 3, 4, 5]
+                    const myn2 = myArr.splice(1, 3)
+                    console.log("C ", myArr);
+                    console.log(myn2);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    C  [ 0, 4, 5 ] <br>
+                    [ 1, 2, 3 ]
+            </div>
+             <p><em><code>splice(1, 3)</code> removes 3 elements starting from index 1.</em></p>
+            <br>
+            <li>When you use <strong>push()</strong> to add an array to another array, the entire array is added as a single element (nested array).</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const marvel_heros = ["thor", "Ironman", "spiderman"]
+                    const dc_heros = ["superman", "flash", "batman"]
+
+                    marvel_heros.push(dc_heros)
+
+                    console.log(marvel_heros);
+                    console.log(marvel_heros[3][1]);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 'thor', 'Ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ] <br>
+                    flash
+            </div>
+            <br>
+            <li>You can merge two or more arrays using the <strong>concat()</strong> method or the spread operator <code>[...array]</code>.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const marvel_heros = ["thor", "Ironman", "spiderman"]
+                    const dc_heros = ["superman", "flash", "batman"]
+                    const allHeros = marvel_heros.concat(dc_heros)
+                    console.log(allHeros);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
+            </div>
+            <br>
+             <li><strong>Spread Operator:</strong> Another way to merge arrays, more concise and flexible.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const marvel_heros = ["thor", "Ironman", "spiderman"]
+                    const dc_heros = ["superman", "flash", "batman"]
+                    const all_new_heros = [...marvel_heros, ...dc_heros]
+
+                    console.log(all_new_heros);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
+            </div>
+            <br>
+            <li>The <strong>flat()</strong> method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
+
+                    const real_another_array = another_array.flat(Infinity)
+                    console.log(real_another_array);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [
+                      1, 2, 3, 4, 5,
+                      6, 7, 6, 7, 4,
+                      5
+                    ]
+            </div>
+            <br>
+            <li><strong>Array.isArray:</strong> Checks whether a variable is an array.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const marvel_heros = ["thor", "Ironman", "spiderman"]
+
+                    console.log(Array.isArray("Hitesh")) // Outputs: false
+                    console.log(Array.isArray(marvel_heros)); // Outputs: true
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                     false<br>
+                     true
+            </div>
+            <br>
+            <li><strong>Array.from:</strong> Creates a new array from an array-like or iterable object.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log(Array.from("Hitesh"))
+                    console.log(Array.from({ name: "Hitesh" })); // Outputs: [] (object is not array-like)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 'H', 'i', 't', 'e', 's', 'h' ] <br>
+                    []
+            </div>
+            <br>
+            <li>The <strong>Array.of()</strong> method creates a new Array instance with a variable number of elements.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let score1 = 100
+                    let score2 = 200
+                    let score3 = 300
+
+                    console.log(Array.of(score1, score2, score3));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [ 100, 200, 300 ]
+            </div>
+            <p><em>This method is useful for creating arrays with different elements without mixing them up.</em></p>
+            <br>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

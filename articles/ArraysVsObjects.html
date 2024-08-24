@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays vs Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #5a67d8;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #2d3748;
+        }
+
+        h2 {
+            color: #4a5568;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .code-example {
+            background-color: #edf2f7;
+            padding: 10px;
+            border-left: 4px solid #5a67d8;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .code-example code {
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        }
+
+        a {
+            color: #5a67d8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5a67d8;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Understanding Arrays and Objects in JavaScript</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>In JavaScript, <strong>arrays</strong> and <strong>objects</strong> are fundamental data structures used to store and manipulate data. While they might seem similar, they have distinct characteristics and are suited for different use cases.</p>
+        </section>
+
+        <section>
+            <h2>Arrays</h2>
+            <p>Arrays are ordered collections of elements that are indexed by numeric values, starting from zero. They are best used when you need to store and manipulate a list of values, such as a series of numbers, strings, or objects.</p>
+            <h3>Example:</h3>
+            <div class="code-example">
+                <code>
+                    const fruits = ["Apple", "Banana", "Cherry"];<br>
+                    console.log(fruits[1]); // Output: Banana
+                </code>
+            </div>
+            <p>In the example above, the array <code>fruits</code> contains three elements, and you can access each element using its index.</p>
+            <h3>Common Array Methods:</h3>
+            <ul>
+                <li><strong>push()</strong>: Adds an element to the end of the array.</li>
+                <li><strong>pop()</strong>: Removes the last element from the array.</li>
+                <li><strong>shift()</strong>: Removes the first element from the array.</li>
+                <li><strong>unshift()</strong>: Adds an element to the beginning of the array.</li>
+                <li><strong>slice()</strong>: Returns a new array with a portion of the original array.</li>
+                <li><strong>splice()</strong>: Adds or removes elements from the array.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Objects</h2>
+            <p>Objects are collections of key-value pairs, where each key is a unique identifier (also called a property name) and each value can be of any data type, including arrays, other objects, or functions.</p>
+            <h3>Example:</h3>
+            <div class="code-example">
+                <code>
+                    const car = {<br>
+                    &nbsp;&nbsp;brand: "Tesla",<br>
+                    &nbsp;&nbsp;model: "Model 3",<br>
+                    &nbsp;&nbsp;color: "Red"<br>
+                    };<br><br>
+                    console.log(car.model); // Output: Model 3
+                </code>
+            </div>
+            <p>In this example, the object <code>car</code> has three properties: <code>brand</code>, <code>model</code>, and <code>color</code>. You can access the values using the property names.</p>
+            <h3>Common Object Methods:</h3>
+            <ul>
+                <li><strong>Object.keys(obj)</strong>: Returns an array of the object's keys.</li>
+                <li><strong>Object.values(obj)</strong>: Returns an array of the object's values.</li>
+                <li><strong>Object.entries(obj)</strong>: Returns an array of key-value pairs from the object.</li>
+                <li><strong>Object.assign()</strong>: Copies properties from one or more source objects to a target object.</li>
+                <li><strong>Object.freeze(obj)</strong>: Freezes the object, preventing any modifications.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Key Differences</h2>
+            <p>While both arrays and objects are used to store data, they differ in the following ways:</p>
+            <ul>
+                <li><strong>Accessing Data:</strong> Arrays use numeric indices to access elements, while objects use keys.</li>
+                <li><strong>Order:</strong> Arrays maintain the order of elements, while the order of properties in an object is not guaranteed.</li>
+                <li><strong>Usage:</strong> Arrays are ideal for lists and ordered data, while objects are better for structured data with named properties.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Understanding when to use arrays and when to use objects is crucial in JavaScript. Arrays are great for ordered collections of items, while objects are better suited for collections of related data. Both are powerful tools that you will frequently use in your JavaScript programming.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

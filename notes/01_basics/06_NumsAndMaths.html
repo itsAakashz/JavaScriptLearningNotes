@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Numbers & Maths</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const balance = new Number("500")
+                    console.log(balance+500);
+
+                    console.log(balance.toString().length);
+                    console.log(balance.toFixed(1));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    1000 <br>
+                    3 <br>
+                    500.0 <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const otherNumber = 123.8966
+
+                    console.log(otherNumber.toPrecision(4));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                   123.9
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const hundreds = 1000000
+                    console.log(hundreds.toLocaleString('en-IN'));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    10,00,000
+            </div>
+            <br>
+            <h3>Maths</h3>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log(Math);
+                    console.log(Math.abs(-4));
+                    console.log(Math.round(4.6));
+                    console.log(Math.ceil(4.2));
+                    console.log(Math.floor(4.9));
+                    console.log(Math.min(4, 3, 6, 8));
+                    console.log(Math.max(4, 3, 6, 8));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    Object [Math] {} <br>
+                    4 <br>
+                    5 <br>
+                    5 <br>
+                    4 <br>
+                    3 <br>
+                    8 <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log(Math.random());
+                    console.log((Math.random()*10) + 1);
+                    console.log(Math.floor(Math.random()*10) + 1);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    0.1952364441147425 <br>
+                    6.256284058932861 <br>
+                    6 <br>
+            </div>
+            <br>
+            <p>Generating random number between two numbers</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const min = 10
+                    const max = 20
+
+                    console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    15 <br>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+
+<script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

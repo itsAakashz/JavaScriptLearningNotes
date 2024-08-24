@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Comparisions</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log("a" > 1);
+                    console.log("02" > 1);
+                    console.log("02" > "1");
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    false <br>
+                    true <br>
+                    false
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log(null > 0);
+                    console.log(null == 0);
+                    console.log(null >= 0);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    false <br>
+                    false <br>
+                    true <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log(undefined == 0);
+                    console.log(undefined > 0);
+                    console.log(undefined < 0);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    false <br>
+                    false <br>
+                    false <br>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log("2" == 2);
+                    console.log("2" === 2);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+true <br> false
+            </div>
+            <h2>Difference Between <code>==</code> and <code>===</code> in JavaScript</h2>
+
+                <p>In JavaScript, <code>==</code> and <code>===</code> are comparison operators, but they work differently:</p>
+
+                <ul>
+                    <li><code>==</code> (Equality Operator) compares two values for equality after converting both values to a common type. This is known as type coercion.</li>
+                    <li><code>===</code> (Strict Equality Operator) compares two values for equality without performing any type conversion. This means both the value and the type must be the same for the comparison to return <code>true</code>.</li>
+                </ul>
+
+                <p>Consider the following examples:</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    console.log("2" == 2);  // Output: true
+                    console.log("2" === 2); // Output: false
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+
+                <h3>Explanation:</h3>
+                <ul>
+                    <li>In the first comparison, <code>"2" == 2</code>, JavaScript converts the string <code>"2"</code> to a number <code>2</code> before comparing, so the result is <code>true</code>.</li>
+                    <li>In the second comparison, <code>"2" === 2</code>, JavaScript compares the string <code>"2"</code> with the number <code>2</code> without type conversion. Since the types are different (string vs. number), the result is <code>false</code>.</li>
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+
+     <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

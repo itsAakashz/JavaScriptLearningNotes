@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Objects</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+           <p>There are multiple ways to create objects in JavaScript. One way is by using the <code>new Object()</code> syntax, and another is by using the object literal syntax <code>{}</code>.</p>
+            <code>const tinderUser = new Object()</code>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                  const tinderUser = {}
+
+                  tinderUser.id = "123abc"
+                  tinderUser.name = "Sammy"
+                  tinderUser.isLoggedIn = false
+
+                  console.log(tinderUser);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                  { id: '123abc', name: 'Sammy', isLoggedIn: false }
+            </div>
+          <br>
+          <h2>Nesting Objects</h2>
+          <p>JavaScript allows you to nest objects within objects, which can be useful for organizing related data.</p>
+          <div class="code-snippet">
+              <pre><code class="language-js">
+                const regularUser = {
+                    email: "some@gmail.com",
+                    fullname: {
+                        userfullname: {
+                            firstname: "hitesh",
+                            lastname: "choudhary"
+                        }
+                    }
+                }
+                console.log(regularUser.fullname.userfullname.firstname);
+              </code></pre>
+              <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="console-output">
+              <p><strong>Console Output:</strong> <br>
+              hitesh
+          </div>
+          <br>
+          <div class="code-snippet">
+            <pre><code class="language-js">
+                const obj1 = {1: "a", 2: "b"}
+                const obj2 = {3: "a", 4: "b"}
+                const obj3 = { obj1, obj2 }
+                console.log(obj3);
+
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="console-output">
+              <p><strong>Console Output:</strong> <br>
+              { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'a', '4': 'b' } }
+          </div>
+          <br>
+          <div class="code-snippet">
+            <pre><code class="language-js">
+                const obj1 = {1: "a", 2: "b"}
+                const obj2 = {3: "a", 4: "b"}
+                const obj4 = {5: "a", 6: "b"}
+                const obj3 = Object.assign({}, obj1, obj2, obj4)
+                console.log(obj3);
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="console-output">
+              <p><strong>Console Output:</strong> <br>
+              { '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
+          </div>
+        <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const obj1 = {1: "a", 2: "b"}
+                    const obj2 = {3: "a", 4: "b"}
+                    const obj4 = {5: "a", 6: "b"}
+                    const obj3 = {...obj1, ...obj2, ...obj4}
+                    console.log(obj3);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+              <div class="console-output">
+                  <p><strong>Console Output:</strong> <br>
+                  { '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
+              </div>
+            <br>
+              <li>JavaScript provides several built-in methods to work with objects, such as <code>Object.keys()</code>, <code>Object.values()</code>, and <code>Object.entries()</code>.</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const tinderUser = { id: '123abc', name: 'Sammy', isLoggedIn: false }
+                    console.log(tinderUser);
+
+                    console.log(Object.keys(tinderUser));
+                    console.log(Object.values(tinderUser));
+                    console.log(Object.entries(tinderUser));
+                    console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+              <div class="console-output">
+                  <p><strong>Console Output:</strong> <br>
+                  { id: '123abc', name: 'Sammy', isLoggedIn: false } <br>
+                  [ 'id', 'name', 'isLoggedIn' ] <br>
+                  [ '123abc', 'Sammy', false ] <br>
+                  [ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ] <br>
+                  true
+              </div>
+            <p>The <code>hasOwnProperty()</code> method is used to check if a specific property exists in an object.</p>
+             <p><em>This method is useful for verifying the existence of properties before attempting to access them.</em></p>
+            <br>
+            <h2>Destructuring Objects</h2>
+            <p>Destructuring allows you to unpack properties from an object into distinct variables.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const course = {
+                        coursename: "js in hindi",
+                        price: "999",
+                        courseInstructor: "hitesh"
+                    };
+
+                    const {courseInstructor: instructor} = course;
+                    console.log(instructor);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    hitesh
+            </div>
+             <p><em>Destructuring provides a clean syntax to extract and assign variables from objects.</em></p>
+
+            
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./02_objects.html" class="nav-btn previous">Previous</a>
+                <a href="../03_basics/01_functions.html" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>
