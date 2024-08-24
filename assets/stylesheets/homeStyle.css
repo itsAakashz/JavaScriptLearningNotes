@@ -133,8 +133,8 @@ body.dark-mode .content {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: inherit;
-    color: inherit;
+    background-color: #333;
+    color: whitesmoke;
     position: fixed;
     width: 100%;
     bottom: 0;
