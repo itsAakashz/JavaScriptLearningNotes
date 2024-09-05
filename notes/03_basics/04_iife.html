@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    //Immediately Invoked Function Expression (IIFE)
+                    (function chai(){
+                        // named IIFE
+                        console.log(`DB CONNECTED`);
+                    })();
+                    
+                    ( (name) => {
+                        console.log(`DB CONNECTED TWO ${name}`);
+                    } )('hitesh')
+                    
+
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <P>If we use two Immediately Invoked Function Expression in single file then we have to put <code>Semi-colon ;</code>in frst one.</P>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    DB CONNECTED
+                    DB CONNECTED TWO hitesh
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./04_iife.html" class="nav-btn previous">Previous</a>
+                <a href="#" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>
