@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Loops: for...of vs for...in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 5px solid #007bff;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript Loops: for...of vs for...in</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>In JavaScript, both <code>for...of</code> and <code>for...in</code> are loops that help you iterate
+                through collections, but they have key differences. Understanding these differences will help you choose
+                the right loop for your specific task.</p>
+        </section>
+
+        <section>
+            <h2>1. <code>for...of</code> Loop</h2>
+            <p>The <code>for...of</code> loop iterates over the <strong>values</strong> of iterable objects like arrays,
+                strings, Maps, and Sets.</p>
+
+            <h3>Example 1: Array</h3>
+            <pre><code>
+const fruits = ['Apple', 'Banana', 'Cherry'];
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+// Output: Apple, Banana, Cherry
+        </code></pre>
+
+            <h3>Example 2: String</h3>
+            <pre><code>
+const greeting = 'Hello';
+for (const char of greeting) {
+    console.log(char);
+}
+// Output: H, e, l, l, o
+        </code></pre>
+
+            <h3>Example 3: Map</h3>
+            <pre><code>
+const countries = new Map();
+countries.set('IN', 'India');
+countries.set('USA', 'United States');
+for (const [key, value] of countries) {
+    console.log(`${key}: ${value}`);
+}
+// Output: IN: India, USA: United States
+        </code></pre>
+        </section>
+
+        <section>
+            <h2>2. <code>for...in</code> Loop</h2>
+            <p>The <code>for...in</code> loop iterates over the <strong>keys</strong> of an object or the indices of an
+                array.</p>
+
+            <h3>Example 1: Object</h3>
+            <pre><code>
+const person = { name: 'John', age: 30, city: 'New York' };
+for (const key in person) {
+    console.log(`${key}: ${person[key]}`);
+}
+// Output: name: John, age: 30, city: New York
+        </code></pre>
+
+            <h3>Example 2: Array</h3>
+            <pre><code>
+const numbers = [10, 20, 30];
+for (const index in numbers) {
+    console.log(index, numbers[index]);
+}
+// Output: 0 10, 1 20, 2 30
+        </code></pre>
+        </section>
+
+        <section>
+            <h2>Key Differences</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th><code>for...of</code></th>
+                        <th><code>for...in</code></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Iterates Over</td>
+                        <td>Values of iterable objects</td>
+                        <td>Keys/indices of an object or array</td>
+                    </tr>
+                    <tr>
+                        <td>Suitable For</td>
+                        <td>Arrays, strings, Maps, Sets</td>
+                        <td>Objects, arrays (not recommended)</td>
+                    </tr>
+                    <tr>
+                        <td>Use Case</td>
+                        <td>Iterating over values of arrays/sets</td>
+                        <td>Iterating over object properties</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <h2>Example Showing Difference</h2>
+        <pre>
+        <code>
+            const arr = [10, 20, 30];
+
+for (const value of arr) {
+    console.log(value); // Iterates over values: 10, 20, 30
+}
+
+for (const index in arr) {
+    console.log(index); // Iterates over indices: 0, 1, 2
+}
+
+        </code>
+    </pre>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Use <code>for...of</code> when you need to iterate over <strong>values</strong> (like arrays, strings, or
+                Maps). Use <code>for...in</code> when you need to iterate over <strong>keys</strong> or properties of
+                objects.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>JavaScript Notes by Aakash Gupta &copy; 2024</p>
+    </footer>
+
+</body>
+
+</html>

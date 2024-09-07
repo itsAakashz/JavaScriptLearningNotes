@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes:</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const coding = ["js", "ruby", "java", "python", "cpp"]
+
+                    coding.forEach( function (val){
+                        console.log(val);
+                    } )
+                    
+                    coding.forEach( (item) => {
+                     //   console.log(item);
+                    } ) 
+
+                    function printMe(item){
+                    // console.log(item);
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    js <br>
+                    ruby <br>
+                    java <br>
+                    python <br>
+                    cpp <br>
+            </div>
+            <br>
+            <li>String Example:</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const coding = ["js", "ruby", "java", "python", "cpp"]
+
+                    coding.forEach( (item, index, arr)=> {
+                        console.log(item, index, arr);
+                    } )
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    js 0 [ 'js', 'ruby', 'java', 'python', 'cpp' ] <br>
+                    ruby 1 [ 'js', 'ruby', 'java', 'python', 'cpp' ] <br>
+                    java 2 [ 'js', 'ruby', 'java', 'python', 'cpp' ] <br>
+                    python 3 [ 'js', 'ruby', 'java', 'python', 'cpp' ] <br>
+                    cpp 4 [ 'js', 'ruby', 'java', 'python', 'cpp' ]    <br>
+            </div>
+            <br>
+            
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myCoding = [
+                    {
+                        languageName: "javascript",
+                        languageFileName: "js"
+                    },
+                    {
+                        languageName: "java",
+                        languageFileName: "java"
+                    },
+                    {
+                        languageName: "python",
+                        languageFileName: "py"
+                    },
+                ]
+                
+                myCoding.forEach( (item) => {
+                    
+                    console.log(item.languageName);
+                } ) 
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                <pre>    
+                    javascript
+                    java
+                    python       
+                </pre>
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+                   myNums.forEach( (num) => {
+                           if (num > 4) {
+                            newNums.push(num)
+                              }
+                         } )
+                      
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [
+                    5,  6, 7, 8, 9,
+                   10,  5, 6, 7, 8,
+                    9, 10
+                 ]
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const books = [
+                    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+                    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+                    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+                    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+                    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+                    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+                    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+                    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+                    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+                  ];
+                
+                  let userBooks = books.filter( (bk) => bk.genre === 'History')
+                
+                  userBooks = books.filter( (bk) => { 
+                    return bk.publish >= 1995 && bk.genre === "History"
+                })
+                  console.log(userBooks);    
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [
+                    {
+                      title: 'Book Three',
+                      genre: 'History',
+                      publish: 1999,
+                      edition: 2007
+                    }
+                  ]
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const newNums = myNumers.map( (num) => { return num + 10})
+
+const newNums = myNumers
+                .map((num) => num * 10 )
+                .map( (num) => num + 1)
+                .filter( (num) => num >= 40)
+
+console.log(newNums);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p>Initial Array:
+                myNumers contains the values [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+                
+                First .map():
+                
+                This method multiplies each element of the array by 10.
+                Example: 1 * 10 = 10, 2 * 10 = 20, etc.
+                Resulting array after this step: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].
+                Second .map():
+                
+                After multiplying by 10, this second map adds 1 to each element.
+                Example: 10 + 1 = 11, 20 + 1 = 21, etc.
+                Resulting array: [11, 21, 31, 41, 51, 61, 71, 81, 91, 101].
+                .filter():
+                
+                This filters out elements that are less than 40.
+                After filtering, the array will only include elements that are >= 40.
+                Resulting array: [41, 51, 61, 71, 81, 91, 101].</p>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    [
+                    41, 51,  61, 71,
+                    81, 91, 101
+                  ]
+            </div>
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./03.html" class="nav-btn previous">Previous</a>
+                <a href="./05.html" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

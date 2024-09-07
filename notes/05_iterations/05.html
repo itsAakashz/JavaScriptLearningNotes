@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes:</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const myNums = [1, 2, 3]
+
+                    const myTotal = myNums.reduce(function (acc, currval) {
+                        console.log(`acc: ${acc} and currval: ${currval}`);
+                        return acc + currval
+                    }, 0)
+                    
+                    // const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
+                    
+                    console.log(myTotal);   
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    acc: 0 and currval: 1
+                    acc: 1 and currval: 2
+                    acc: 3 and currval: 3
+                    6
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
+
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+console.log(priceToPay);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+               22996    
+            </div>
+            <br>
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./04.html" class="nav-btn previous">Previous</a>
+                <a href="./06.html" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>
