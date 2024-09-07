@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const isUserloggedIn = true
+                    const temperature = 41
+                    
+                    if ( temperature === 40 ){
+                        console.log("less than 50");
+                    } else {
+                        console.log("temperature is greater than 50");
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    temperature is greater than 50
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const balance = 1000
+
+                    if (balance > 500) console.log("test"),console.log("test2");
+                    
+                    if (balance < 500) {
+                        console.log("less than 500");
+                    } else if (balance < 750) {
+                        console.log("less than 750");
+                        
+                    } else if (balance < 900) {
+                        console.log("less than 750");
+                        
+                    } else {
+                        console.log("less than 1200");
+                    
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    test
+                    test2
+                    less than 1200
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    <div class="code-snippet">
+                <pre><code class="language-js">
+                    const userLoggedIn = true
+                    const debitCard = true
+                    const loggedInFromGoogle = false
+                    const loggedInFromEmail = true
+                    
+                    if (userLoggedIn && debitCard && 2==3) {
+                        console.log("Allow to buy course");
+                    }
+                    
+                    if (loggedInFromGoogle || loggedInFromEmail) {
+                        console.log("User logged in");
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    User logged in
+            </div>
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="../03_basics/04_iife.html" class="nav-btn previous">Previous</a>
+                <a href="./02_switch.html" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>
