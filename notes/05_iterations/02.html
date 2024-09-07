@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <h1>Loop:While, Do While</h1>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let index = 0
+                    while (index <= 10) {
+                        console.log(`Value of index is ${index}`);
+                        index = index + 2
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    Value of index is 0
+                    Value of index is 2
+                    Value of index is 4
+                    Value of index is 6
+                    Value of index is 8
+                    Value of index is 10
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let myArray = ['flash', "batman", "superman"]
+
+                    let arr = 0
+                    while (arr < myArray.length) {
+                        console.log(`Value is ${myArray[arr]}`);
+                        arr = arr + 1
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    Value is flash
+                    Value is batman
+                    Value is superman
+            </div>
+            <br>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    let score = 11
+
+                    do {
+                        console.log(`Score is ${score}`);
+                        score++
+                    } while (score <= 10);
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <P>Do While Loop first execute and then check condition</P>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    Score is 11
+            </div>
+            
+
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./01_functions.html" class="nav-btn previous">Previous</a>
+                <a href="#" class="nav-btn next">Next</a>
+            </div>                                                                                                                                                                                                                                                                   
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>

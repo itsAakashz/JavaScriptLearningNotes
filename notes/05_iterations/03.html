@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>JavaScript Learning Notes: Arrays</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light</button>
+    </header>
+
+    <main>
+        <section class="note">
+            <h3> <code>for...of</code> </h3>
+            <li>Example:</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const arr = [1, 2, 3, 4, 5]
+
+                    for (const num of arr) {
+                        console.log(num);
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <p>The for...of loop is ideal for iterating over iterable objects like arrays, strings, and Maps.</p>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+            1 <br>
+            2 <br>
+            3 <br>
+            4 <br>
+            5 
+            </div>
+            <br>
+            <li>String Example:</li>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const greetings = "Hello world!"
+                    for (const greet of greetings) {
+                        console.log(`Each char is ${greet}`)
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                    Each char is H
+                    Each char is e
+                    Each char is l
+                    Each char is l
+                    Each char is o
+                    Each char is  
+                    Each char is w
+                    Each char is o
+                    Each char is r
+                    Each char is l
+                    Each char is d
+                    Each char is !
+            </div>
+            <br>
+            <h2>Map</h2>
+            <li>Definition:</li><p> A Map is a collection of key-value pairs where both keys and values can be any data type.</p>
+            <div class="code-snippet">
+                <pre><code class="language-js">
+                    const map = new Map()
+                    map.set('IN', "India")
+                    map.set('USA', "United States of America")
+                    map.set('Fr', "France")
+                    map.set('IN', "India")
+                    console.log(map);
+
+                    //Iterating KEY and VALUES at once
+                    for (const [key, value] of map) {
+                        console.log(key, ':-', value);
+                    }
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <li><code>map.set()</code>method adds new key-value pairs to the map.</li>
+            <div class="console-output">
+                <p><strong>Console Output:</strong> <br>
+                <pre>    
+                         Map(3) {
+                        'IN' => 'India',
+                        'USA' => 'United States of America',
+                        'Fr' => 'France'
+                      }
+                      
+                      IN :- India
+                      USA :- United States of America
+                      Fr :- France
+                </pre>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <a href="./01_functions.html" class="nav-btn previous">Previous</a>
+                <a href="#" class="nav-btn next">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Notes by Aakash Gupta</p>
+    </footer>
+    <script src="../../assets/scripts/notesScript.js"></script>
+</body>
+</html>
